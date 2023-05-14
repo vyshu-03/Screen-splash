@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Screen Resolution</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+  </head>
+  <style>
+    body{
+      background-color:beige;
+    }
+    .container
+    {
+      line-height:200px;
+      height:200px;
+      text-align:center;
+      background-image:linear-gradient(rgb(92, 221, 203),beige,whitesmoke,beige,rgb(92, 221, 203));
+      border:3px solid whitesmoke;
+    }
+    .container h1{
+      line-height:1.5;
+      display:inline-block;
+      vertical-align:middle;
+    }
+    .res{
+      font-size: xx-large;
+      font-weight:bolder;
+      background-image:linear-gradient(yellow,whitesmoke,yellow);
+      border:10px outset red;
+    }
+    #resolution-container{
+      line-height:100px;
+    }
+    .container h3{
+      line-height:30px;
+    }
+    .container p{
+      line-height:50px;
+    }
+    .hfont{
+      font-family: 'Dancing Script', cursive;
+    }
+  </style>
+  <body>
+<div class="container">
+  <h1>Screen Resolution</h1>
+
+    <div id="resolution-container"></div>
+    <p>Here the first value depicts the number of pixels present on the width of your screen while the second one depict the number of pixels present on your screen's height.</p>
+    <h3 id="wid"></h3>
+    <h3 id="hei"></h3>
+    <h3 class="hfont">----- Thank You -----</h3>
+  </div>
+    <script>
+      var resolutionContainer = document.getElementById('resolution-container');
+      var screenWidth = window.screen.width;
+      var screenHeight = window.screen.height;
+      resolutionContainer.innerHTML = "Your screen's resolution is :" + '<br>' + '<span class="res">'+ screenWidth + ' x ' + screenHeight +'</span>';
+      wid.innerHTML = "Screen Width : " + screenWidth + " pixels";
+      hei.innerHTML = "Screen Height : " + screenHeight + "pixels";
+    </script>
+  </body>
+</html>
